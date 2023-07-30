@@ -21,13 +21,13 @@ const Socails = () => {
     className='flex justify-center items-center gap-10'> 
 
       <div className='flex space-x-4' >
-          <img src={insta} alt="" 
-           onClick={()=> window.open("https://www.instagram.com/mihirbari.mb/")}/>
+          {/* <img src={insta} alt="" 
+           onClick={()=> window.open("https://www.instagram.com/mihirbari.mb/")}/> */}
         {/* <Link>
           <img src={fb} alt="" />
         </Link> */}
-          <img src={disc} alt="" 
-           onClick={()=> window.open("https://discord.gg/4dzNcuVA")}/>
+          {/* <img src={disc} alt="" 
+           onClick={()=> window.open("https://discord.gg/4dzNcuVA")}/> */}
           <img src={git} alt=""
            onClick={()=> window.open("https://github.com/MihirBari")} />
         {/* <Link to="https://www.linkedin.com/in/mihir-bari/"> */}

@@ -136,16 +136,16 @@ import {
         "However, I utilized this time to my advantage and dedicated myself to acquiring a diverse set of skills. I enrolled in various courses and bootcamps, determined to attain the knowledge and expertise needed to thrive in my chosen field."
       ],
     },
-    {
-      title: "Job Opportunity",
-      company_name: "Full stack Developer",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "May 2023 - Present",
-      points: [
-        "In college, numerous placement opportunities arose, but unfortunately, I missed out on seizing them. However, my current focus is on seeking opportunities to further enrich my skill sets and expand my knowledge across different technologies. I am eager to demonstrate my abilities and would enthusiastically embrace any chance to showcase my skills."
-      ],
-    },
+    // {
+    //   title: "Job Opportunity",
+    //   company_name: "Full stack Developer",
+    //   icon: meta,
+    //   iconBg: "#E6DEDD",
+    //   date: "May 2023 - Present",
+    //   points: [
+    //     "In college, numerous placement opportunities arose, but unfortunately, I missed out on seizing them. However, my current focus is on seeking opportunities to further enrich my skill sets and expand my knowledge across different technologies. I am eager to demonstrate my abilities and would enthusiastically embrace any chance to showcase my skills."
+    //   ],
+   // },
   ];
   
   
