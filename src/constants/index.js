@@ -190,7 +190,7 @@ import {
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/MihirBari/Social-Media",
     },
     {
       name: "E-commerce Website",
