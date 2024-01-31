@@ -143,9 +143,9 @@ import {
       iconBg: "#E6DEDD",
       date: "Oct 2023 - Present",
       points: [
-        `As a recent graduate, I enthusiastically embarked on my journey to contribute to the tech industry and showcase my skills to the world. After a determined search, I am thrilled to share that I have successfully secured a position as an Associate Engineer.
-This opportunity represents a significant milestone in my career, and I am eager to leverage my education, passion for technology, and dedication to make meaningful contributions to the team and the projects we undertake.
-I am excited about the challenges and learning opportunities that lie ahead and am committed to continuously growing and developing as a professional in the field of engineering.`
+        "As a recent graduate, I enthusiastically embarked on my journey to contribute to the tech industry and showcase my skills to the world. After a determined search, I am thrilled to share that I have successfully secured a position as an Associate Engineer.",
+"This opportunity represents a significant milestone in my career, and I am eager to leverage my education, passion for technology, and dedication to make meaningful contributions to the team and the projects we undertake.",
+"I am excited about the challenges and learning opportunities that lie ahead and am committed to continuously growing and developing as a professional in the field of engineering."
       ],
    },
   ];
