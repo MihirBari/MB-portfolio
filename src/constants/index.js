@@ -228,7 +228,7 @@ import {
         }
       ],
       image: techsa,
-      source_code_link: "Techsa.net",
+      source_code_link: "https://Techsa.net",
     }
   ];
 
