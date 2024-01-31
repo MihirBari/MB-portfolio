@@ -20,7 +20,8 @@ import {
     threejs,
     Java,
     SQL,
-    techsa
+    techsa,
+    techsaLogo
   } from "../assets";
   
   export const navLinks = [
@@ -140,7 +141,7 @@ import {
     {
       title: "Job",
       company_name: "Techsa Service pvt ltd",
-      icon: meta,
+      icon: techsaLogo,
       iconBg: "#E6DEDD",
       date: "Oct 2023 - Present",
       points: [
