@@ -19,7 +19,8 @@ import {
     tripguide,
     threejs,
     Java,
-    SQL
+    SQL,
+    techsa
   } from "../assets";
   
   export const navLinks = [
@@ -225,7 +226,7 @@ import {
           color: "blue-text-gradient",
         }
       ],
-      image: carrent,
+      image: techsa,
       source_code_link: "Techsa.net",
     }
   ];
