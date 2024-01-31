@@ -30,6 +30,7 @@ import tesla from "./company/HMJC.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import techsa from "./techsa.png"
 
 
 export {
@@ -59,5 +60,6 @@ export {
   jobit,
   tripguide,
   Java,
-  SQL
+  SQL,
+  techsa
 };
