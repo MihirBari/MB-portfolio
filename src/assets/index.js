@@ -8,6 +8,7 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
+import techsaLogo from "./tech/techsa.png;
 
 import git from "./tech/git.png";
 import html from "./tech/html.png";
@@ -61,5 +62,6 @@ export {
   tripguide,
   Java,
   SQL,
-  techsa
+  techsa,
+  techsaLogo
 };
