@@ -136,16 +136,18 @@ import {
         "However, I utilized this time to my advantage and dedicated myself to acquiring a diverse set of skills. I enrolled in various courses and bootcamps, determined to attain the knowledge and expertise needed to thrive in my chosen field."
       ],
     },
-    // {
-    //   title: "Job Opportunity",
-    //   company_name: "Full stack Developer",
-    //   icon: meta,
-    //   iconBg: "#E6DEDD",
-    //   date: "May 2023 - Present",
-    //   points: [
-    //     "In college, numerous placement opportunities arose, but unfortunately, I missed out on seizing them. However, my current focus is on seeking opportunities to further enrich my skill sets and expand my knowledge across different technologies. I am eager to demonstrate my abilities and would enthusiastically embrace any chance to showcase my skills."
-    //   ],
-   // },
+    {
+      title: "Job",
+      company_name: "Techsa Service pvt ltd",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "Oct 2023 - Present",
+      points: [
+        `As a recent graduate, I enthusiastically embarked on my journey to contribute to the tech industry and showcase my skills to the world. After a determined search, I am thrilled to share that I have successfully secured a position as an Associate Engineer.
+This opportunity represents a significant milestone in my career, and I am eager to leverage my education, passion for technology, and dedication to make meaningful contributions to the team and the projects we undertake.
+I am excited about the challenges and learning opportunities that lie ahead and am committed to continuously growing and developing as a professional in the field of engineering.`
+      ],
+   },
   ];
   
   
@@ -213,6 +215,19 @@ import {
       image: tripguide,
       source_code_link: "https://github.com/",
     },
+       {
+      name: "Techsa Website",
+      description:
+        "Static website for my current company.",
+      tags: [
+        {
+          name: "react",
+          color: "blue-text-gradient",
+        }
+      ],
+      image: carrent,
+      source_code_link: "Techsa.net",
+    }
   ];
 
  
