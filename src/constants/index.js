@@ -10,18 +10,19 @@ import {
     nodejs,
     mongodb,
     git,
-    meta,
+    
     starbucks,
     tesla,
     shopify,
     carrent,
     jobit,
-    tripguide,
+    
     threejs,
     Java,
     SQL,
     techsa,
-    techsaLogo
+    techsaLogo,
+    crm
   } from "../assets";
   
   export const navLinks = [
@@ -197,9 +198,9 @@ import {
       source_code_link: "https://github.com/MihirBari/Social-Media",
     },
     {
-      name: "E-commerce Website",
+      name: "CRM",
       description:
-        "Welcome to our versatile multi-vendor platform, where you can both sell and purchase a wide range of products.",
+        "Developed an internal web application for tracking opportunities and sales details to facilitate analysis and planning. Additionally, the application includes a leave application system for employees. The application features role-based access control to ensure secure and customized user experiences for different types of users.",
       tags: [
         {
           name: "reactjs",
@@ -210,12 +211,16 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "mongoDb",
-          color: "pink-text-gradient",
+          name: "SQL",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "NodeJs",
+          color: "green-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: crm,
+      source_code_link: "https://github.com/MihirBari/CRM",
     },
        {
       name: "Techsa Website",
