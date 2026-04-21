@@ -32,7 +32,7 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import techsa from "./techsa.png"
-import crm from "./CRM.png"
+import crm from "./CRM1.png"
 
 
 export {
