@@ -22,7 +22,7 @@ import {
     SQL,
     techsa,
     techsaLogo,
-    CRM1
+    crm
   } from "../assets";
   
   export const navLinks = [
@@ -219,7 +219,7 @@ import {
           color: "green-text-gradient",
         },
       ],
-      image: CRM1,
+      image: crm,
       source_code_link: "https://github.com/MihirBari/CRM",
     },
        {
