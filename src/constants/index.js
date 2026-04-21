@@ -10,13 +10,11 @@ import {
     nodejs,
     mongodb,
     git,
-    
     starbucks,
     tesla,
     shopify,
     carrent,
     jobit,
-    
     threejs,
     Java,
     SQL,
