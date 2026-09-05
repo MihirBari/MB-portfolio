@@ -20,22 +20,28 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import Java from "./tech/Java.png"
 import SQL from "./tech/SQL.png"
-
-import threejs from "./tech/threejs.svg";
+import RAG from "./tech/RAG.jpg"
+import lama from "./tech/Lama.png";
+import threejs from "./tech/threejs.png";
+import mcpIcon from "./tech/mcp-icon.png";
 
 import meta from "./company/Future.png";
 import shopify from "./company/RGIT.png";
 import starbucks from "./company/HMP.png";
 import tesla from "./company/HMJC.png";
 
+import docker from "./tech/docker.png";
+import typescript from "./tech/typescript.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import techsa from "./techsa.png"
-import crm from "./CRM1.png"
-
+import techsa from "./techsa.png";
+import crm from "./CRM1.png";
+import mcp from "./MCP.png";
+import herobg from "./herobg.png";
 
 export {
+  herobg,
   logo,
   backend,
   creator,
@@ -55,6 +61,7 @@ export {
   tailwind,
   threejs,
   meta,
+  RAG,
   shopify,
   starbucks,
   tesla,
@@ -65,5 +72,10 @@ export {
   SQL,
   techsa,
   crm,
-  techsaLogo
+  mcp,
+  lama,
+  techsaLogo,
+  docker,
+  typescript,
+  mcpIcon,
 };

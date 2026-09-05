@@ -1,29 +1,48 @@
-import { BrowserRouter  } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { herobg } from "./assets";
 import {
-  About , Contact , Experience, Hero,
-  Navbar , Socails, Tech , Works 
-} from './components'
+  About,
+  Contact,
+  Experience,
+  Hero,
+  Navbar,
+  Socails,
+  Tech,
+  Works,
+} from "./components";
 
-const App = ()=> {
+const App = () => {
   return (
- <BrowserRouter>
- <div className="relative z-0 bg-primary">
-  <div className="bg-hero-pattern bg-cover bg-no-repeat
-  bg-center">
-    <Navbar />
-     <Hero />
-  </div>
-  <About />
-  <Experience />
-  <Tech />
-  <Works/>
-  <div className="relative z-0 ">
-  <Contact />
- <Socails />
-  </div >
- </div>
- </BrowserRouter>
+    <BrowserRouter>
+      <div
+        style={{ backgroundColor: "#050816", color: "#ffffff" }}
+        className='relative z-0 min-h-screen selection:bg-[#915EFF] selection:text-white'
+      >
+        <div
+          style={{
+            backgroundImage: `url(${herobg})`,
+            backgroundColor: "#050816",
+          }}
+          className='bg-cover bg-no-repeat bg-center relative'
+        >
+          <Navbar />
+          <Hero />
+        </div>
+
+        {/* Ambient background glow accents */}
+        <div className='relative'>
+          <About />
+          <Works />
+          <Tech />
+          <Experience />
+          <div className='relative z-0'>
+            <Contact />
+            <Socails />
+          </div>
+        </div>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
