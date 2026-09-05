@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { Tilt } from "react-tilt";
 import { motion, AnimatePresence } from "framer-motion";
 import { styles } from "../styles";
@@ -8,22 +9,41 @@ import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectModal = ({ project, onClose }) => {
+  useEffect(() => {
+    if (project) {
+      document.body.style.overflow = "hidden";
+    }
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [project, onClose]);
+
   if (!project) return null;
 
-  return (
+  return createPortal(
     <AnimatePresence>
-      <div className='fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-black/80 backdrop-blur-md'>
+      <div
+        onClick={onClose}
+        className='fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 sm:py-10 overflow-y-auto bg-black/85 backdrop-blur-md'
+      >
         <motion.div
+          onClick={(e) => e.stopPropagation()}
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.3 }}
-          className='relative w-full max-w-4xl bg-[#100d25] border border-white/15 rounded-3xl p-6 sm:p-8 shadow-[0_25px_80px_rgba(0,0,0,0.8)] max-h-[90vh] overflow-y-auto'
+          className='relative w-full max-w-4xl bg-[#100d25] border border-white/20 rounded-3xl p-6 sm:p-8 shadow-[0_25px_80px_rgba(0,0,0,0.95)] max-h-[88vh] overflow-y-auto my-auto'
         >
           {/* Close button */}
           <button
             onClick={onClose}
-            className='absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white text-xl transition-colors z-10'
+            className='absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white text-xl transition-colors z-20 cursor-pointer'
+            aria-label='Close modal'
           >
             ✕
           </button>
@@ -138,7 +158,8 @@ const ProjectModal = ({ project, onClose }) => {
           </div>
         </motion.div>
       </div>
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 };
 
