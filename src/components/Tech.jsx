@@ -6,15 +6,6 @@ import { technologies } from "../constants";
 import { styles } from "../styles";
 import { textVariant, fadeIn } from "../utils/motion";
 
-const featured3dTech = [
-  "Model Context Protocol (MCP)",
-  "React JS",
-  "Node JS",
-  "SQL",
-  "Docker",
-  "Three JS",
-];
-
 const Tech = () => {
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -75,43 +66,28 @@ const Tech = () => {
         })}
       </motion.div>
 
-      {/* 3D Balls & Badges Grid */}
+      {/* 3D Balls & Badges Grid (100% Uniform 3D Balls) */}
       <div className='mt-12 flex flex-row flex-wrap justify-center gap-8 sm:gap-10'>
-        {filteredTechnologies.map((technology) => {
-          const shouldRender3d =
-            activeCategory !== "All" || featured3dTech.includes(technology.name);
-
-          return (
-            <div
-              className='flex flex-col items-center group w-28 sm:w-32'
-              key={technology.name}
-            >
-              <div className='w-24 h-24 sm:w-28 sm:h-28 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center'>
-                {shouldRender3d ? (
-                  <BallCanvas icon={technology.icon} />
-                ) : (
-                  <div className='w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-[#100d25]/80 border border-white/10 p-3 shadow-lg flex items-center justify-center group-hover:border-[#00f0ff]/50 transition-all'>
-                    <img
-                      src={technology.icon}
-                      alt={technology.name}
-                      className='w-12 h-12 object-contain'
-                    />
-                  </div>
-                )}
-              </div>
-              <div className='mt-2 text-center'>
-                <p className='text-white text-xs font-semibold group-hover:text-[#00f0ff] transition-colors leading-tight'>
-                  {technology.name}
-                </p>
-                {technology.level && (
-                  <span className='inline-block mt-1 text-[10px] px-2 py-0.5 rounded-full bg-white/[0.05] border border-white/10 text-secondary'>
-                    {technology.level}
-                  </span>
-                )}
-              </div>
+        {filteredTechnologies.map((technology) => (
+          <div
+            className='flex flex-col items-center group w-28 sm:w-32'
+            key={technology.name}
+          >
+            <div className='w-24 h-24 sm:w-28 sm:h-28 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center'>
+              <BallCanvas icon={technology.icon} />
             </div>
-          );
-        })}
+            <div className='mt-2 text-center'>
+              <p className='text-white text-xs font-semibold group-hover:text-[#00f0ff] transition-colors leading-tight'>
+                {technology.name}
+              </p>
+              {technology.level && (
+                <span className='inline-block mt-1 text-[10px] px-2 py-0.5 rounded-full bg-white/[0.05] border border-white/10 text-secondary'>
+                  {technology.level}
+                </span>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

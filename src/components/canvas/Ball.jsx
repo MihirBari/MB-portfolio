@@ -60,15 +60,15 @@ const BallCanvas = ({ icon }) => {
   return (
     <BallErrorBoundary
       fallback={
-        <div className='w-full h-full rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center p-2.5 shadow-lg backdrop-blur-md'>
-          <img src={icon} alt='tech-icon' className='w-14 h-14 object-contain' />
+        <div className='w-full h-full rounded-full bg-gradient-to-tr from-[#1a1435] via-[#281e50] to-[#100d25] border-2 border-white/20 flex items-center justify-center p-3 shadow-[inset_0_2px_8px_rgba(255,255,255,0.2),0_10px_25px_rgba(0,0,0,0.6)]'>
+          <img src={icon} alt='tech-icon' className='w-12 h-12 object-contain' />
         </div>
       }
     >
       <Canvas
         frameloop='demand'
-        dpr={[1, 2]}
-        gl={{ preserveDrawingBuffer: true, alpha: true }}
+        dpr={[1, 1.5]}
+        gl={{ preserveDrawingBuffer: false, alpha: true }}
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls enableZoom={false} />
