@@ -28,6 +28,7 @@ import {
   lama,
   docker,
   typescript,
+  money,
 } from "../assets";
 
 export const navLinks = [
@@ -311,6 +312,44 @@ const projects = [
       { label: "Authentication", value: "Role-Based (RBAC)" },
       { label: "Email Intelligence", value: "Pixel Open Tracking" },
       { label: "Automations", value: "Automated DOB Triggers" },
+    ],
+  },
+  {
+    id: "money-manager",
+    name: "Money Flow – Personal Banking & Expense Intelligence",
+    subtitle: "Real-Time UPI Expense Intelligence & Banking Ledger",
+    featured: true,
+    category: "Full Stack",
+    badge: "⭐ FinTech & Intelligence",
+    description:
+      "Full-stack personal finance and banking ledger portal featuring real-time UPI expense tracking, automated SMS & mail sync parsing, multi-account cash flow analytics, and category-wise spending intelligence.",
+    longDescription:
+      "Money Flow (Money Manager) is a comprehensive personal banking and expense intelligence platform. Built with a responsive dark-mode cyber interface, it automatically logs and categorizes financial transactions from banking SMS updates and statement feeds. The dashboard provides instant visibility into total monthly expenses, salary inflow, latest account balances, and automated SIP/savings tracking with dynamic cash-flow bar comparisons and doughnut category distributions.",
+    tags: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Node.js / Express", color: "green-text-gradient" },
+      { name: "FinTech Analytics", color: "pink-text-gradient" },
+      { name: "UPI & IMPS Tracking", color: "blue-text-gradient" },
+      { name: "SMS Auto-Log Parser", color: "orange-text-gradient" },
+      { name: "Chart.js / Data Viz", color: "green-text-gradient" },
+      { name: "SQL Ledger", color: "pink-text-gradient" },
+      { name: "Tailwind CSS", color: "blue-text-gradient" },
+    ],
+    image: money,
+    source_code_link: "https://github.com/MihirBari",
+    is_enterprise: false,
+    highlights: [
+      "Automated SMS & email bank statement transaction ingestion with real-time balance sync",
+      "Comprehensive UPI, IMPS, and debit card classification with intelligent payee resolution",
+      "Dynamic cash flow dashboard comparing net income, monthly outflow, and savings rate",
+      "Interactive category breakdown with custom filters, search by reference ID, and date ranges",
+      "Instant debit/credit transaction ledger with balance history and real-time alerts",
+    ],
+    metrics: [
+      { label: "Architecture", value: "Full Stack FinTech" },
+      { label: "Sync Engine", value: "SMS & Statement Parser" },
+      { label: "Ledger", value: "Real-Time UPI & IMPS" },
+      { label: "Analytics", value: "Cash Flow & Category Breakdown" },
     ],
   },
   {

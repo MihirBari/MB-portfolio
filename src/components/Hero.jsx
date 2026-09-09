@@ -384,7 +384,7 @@ const Hero = () => {
               href='#projects'
               className='px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-[#00f0ff] bg-cyan-950/40 border border-cyan-500/40 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] backdrop-blur-md transition-all flex items-center gap-1.5'
             >
-              <span>⭐</span> Featured (MCP & CRM)
+              <span>⭐</span> Featured Systems
             </a>
             <a
               href='#contact'

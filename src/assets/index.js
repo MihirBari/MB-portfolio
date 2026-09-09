@@ -39,6 +39,7 @@ import techsa from "./techsa.png";
 import crm from "./CRM1.png";
 import mcp from "./MCP.png";
 import herobg from "./herobg.png";
+import money from "./Money.png";
 
 export {
   herobg,
@@ -78,4 +79,5 @@ export {
   docker,
   typescript,
   mcpIcon,
+  money,
 };

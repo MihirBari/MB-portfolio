@@ -316,9 +316,10 @@ const Works = () => {
           className='mt-3 text-secondary text-[16px] sm:text-[17px] max-w-3xl leading-[30px]'
         >
           Explore full-stack enterprise systems, AI agent platforms, and modern web applications.
-          From <span className='text-white font-semibold'>in-house CRM intelligence</span> with tracking pixels
-          and automated email notifications, to <span className='text-[#00f0ff] font-semibold'>autonomous Model Context Protocol (MCP)</span> infrastructure
-          agents and corporate portals.
+          From <span className='text-white font-semibold'>in-house CRM intelligence</span> with tracking pixels,
+          to <span className='text-emerald-400 font-semibold'>Money Flow</span> real-time UPI expense tracking,
+          and <span className='text-[#00f0ff] font-semibold'>autonomous Model Context Protocol (MCP)</span> infrastructure
+          agents.
         </motion.p>
       </div>
 
