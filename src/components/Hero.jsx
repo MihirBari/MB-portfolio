@@ -296,7 +296,7 @@ const Hero = () => {
   const [heroView, setHeroView] = useState("3d");
 
   return (
-    <section className='relative w-full h-screen mx-auto overflow-hidden'>
+    <section className='relative w-full h-screen mx-auto overflow-hidden bg-[#050816]'>
       {/* Background ambient radial glows */}
       <div className='absolute top-20 left-1/4 -translate-x-1/2 w-[550px] h-[400px] bg-[#915EFF]/15 rounded-full blur-[130px] pointer-events-none' />
       <div className='absolute top-48 right-10 w-[450px] h-[350px] bg-[#00f0ff]/12 rounded-full blur-[120px] pointer-events-none' />

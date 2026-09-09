@@ -23,7 +23,7 @@ const App = () => {
             backgroundImage: `url(${herobg})`,
             backgroundColor: "#050816",
           }}
-          className='bg-cover bg-no-repeat bg-center relative'
+          className='bg-cover bg-no-repeat bg-center relative bg-[#050816]'
         >
           <Navbar />
           <Hero />

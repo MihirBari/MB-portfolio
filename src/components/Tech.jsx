@@ -68,13 +68,17 @@ const Tech = () => {
 
       {/* 3D Balls & Badges Grid (100% Uniform 3D Balls) */}
       <div className='mt-12 flex flex-row flex-wrap justify-center gap-8 sm:gap-10'>
-        {filteredTechnologies.map((technology) => (
+        {filteredTechnologies.map((technology, index) => (
           <div
             className='flex flex-col items-center group w-28 sm:w-32'
             key={technology.name}
           >
-            <div className='w-24 h-24 sm:w-28 sm:h-28 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center'>
-              <BallCanvas icon={technology.icon} />
+            <div className='w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center'>
+              <BallCanvas
+                icon={technology.icon}
+                name={technology.name}
+                index={index}
+              />
             </div>
             <div className='mt-2 text-center'>
               <p className='text-white text-xs font-semibold group-hover:text-[#00f0ff] transition-colors leading-tight'>

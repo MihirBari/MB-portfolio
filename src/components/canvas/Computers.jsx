@@ -4,6 +4,8 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+const MODEL_PATH = `${process.env.PUBLIC_URL || ""}/desktop_pc/scene.gltf`;
+
 class ComputersErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -40,20 +42,21 @@ class ComputersErrorBoundary extends React.Component {
 }
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/scene.gltf");
+  const computer = useGLTF(MODEL_PATH);
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.35} groundColor='black' />
+      <ambientLight intensity={0.7} />
+      <hemisphereLight intensity={0.5} groundColor='black' />
       <spotLight
         position={[-20, 50, 10]}
-        angle={0.12}
+        angle={0.15}
         penumbra={1}
-        intensity={1}
+        intensity={1.5}
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={1} />
+      <pointLight intensity={1.5} position={[0, 1, 0]} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.65 : 0.75}
@@ -87,7 +90,22 @@ const ComputersCanvas = ({ fallback }) => {
         shadows
         dpr={[1, 2]}
         camera={{ position: [20, 3, 5], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true, alpha: true }}
+        gl={{
+          preserveDrawingBuffer: false,
+          alpha: true,
+          antialias: true,
+          powerPreference: "high-performance",
+        }}
+        onCreated={({ gl }) => {
+          gl.domElement.addEventListener("webglcontextlost", (event) => {
+            event.preventDefault();
+            console.warn("ComputersCanvas WebGL context lost. Preventing default to allow restoration.");
+          });
+          gl.domElement.addEventListener("webglcontextrestored", () => {
+            console.log("ComputersCanvas WebGL context restored successfully.");
+          });
+        }}
+        className='w-full h-full'
       >
         <Suspense fallback={<CanvasLoader />}>
           <OrbitControls
@@ -106,6 +124,6 @@ const ComputersCanvas = ({ fallback }) => {
   );
 };
 
-useGLTF.preload("./desktop_pc/scene.gltf");
+useGLTF.preload(MODEL_PATH);
 
 export default ComputersCanvas;

@@ -23,7 +23,7 @@ import SQL from "./tech/SQL.png"
 import RAG from "./tech/RAG.jpg"
 import lama from "./tech/Lama.png";
 import threejs from "./tech/threejs.png";
-import mcpIcon from "./tech/mcp-icon.png";
+import mcpIcon from "./tech/mcp-icon.svg";
 
 import meta from "./company/Future.png";
 import shopify from "./company/RGIT.png";
