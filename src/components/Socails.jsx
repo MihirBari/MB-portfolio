@@ -53,7 +53,7 @@ const Socails = () => {
         ))}
 
         <a
-          href='mailto:barimihir23@gmail.com'
+          href='mailto:mihir26bari@gmail.com'
           title='Send Email to Mihir'
           className='px-4 py-2 rounded-xl bg-white/[0.04] hover:bg-gradient-to-r hover:from-[#915EFF] hover:to-[#7000ff] border border-white/10 text-xs font-semibold text-white transition-all duration-300'
         >

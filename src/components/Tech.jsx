@@ -16,7 +16,7 @@ const featured3dTech = [
 ];
 
 const Tech = () => {
-  const [activeCategory, setActiveCategory] = useState("AI & Tools");
+  const [activeCategory, setActiveCategory] = useState("All");
 
   const categories = [
     "All",
