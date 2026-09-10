@@ -179,19 +179,21 @@ const HeroConsole = () => {
                   {"// Anthropic Model Context Protocol (MCP) Runtime"}
                 </p>
                 <p className='text-[#00f0ff]'>
-                  $ anton.call_tool(<span className='text-amber-300'>"solarwinds_swql"</span>, &#123;
+                  $ anton.auth_verify(&#123; role: <span className='text-emerald-300'>"operator"</span>, assigned_tools: [<span className='text-amber-300'>"solarwinds"</span>] &#125;)
                 </p>
-                <p className='pl-4 text-purple-300'>
-                  query: <span className='text-emerald-300'>"SELECT NodeID, Status FROM Orion.Nodes"</span>
+                <p className='text-emerald-400 pl-2 text-[11px]'>
+                  ✔ [AUTH 200] Profile authorized for SolarWinds SWIS
                 </p>
-                <p className='text-[#00f0ff]'>&#125;)</p>
-                <p className='text-emerald-400'>
-                  ✔ [200 OK] Telemetry analyzed: 148 nodes healthy, 0 critical alerts
+                <p className='text-purple-300 pt-1'>
+                  $ sandbox.execute(&#123; engine: <span className='text-amber-300'>"SWQL"</span>, query: <span className='text-emerald-300'>"SELECT TOP 10 NodeID FROM Orion.Nodes"</span> &#125;)
+                </p>
+                <p className='text-emerald-400 pl-2 text-[11px]'>
+                  ✔ [200 OK] 24ms • 10 records retrieved via MCP transport
                 </p>
                 <div className='pt-1 text-slate-300'>
-                  <span className='text-pink-400'>$</span> anton.call_tool(<span className='text-amber-300'>"bigfix_relevance"</span>)
-                  <p className='text-emerald-400 pl-2'>
-                    ✔ [200 OK] 14 patches verified • Compliance: 99.4%
+                  <span className='text-pink-400'>$</span> sandbox.execute(&#123; engine: <span className='text-amber-300'>"BigFix"</span> &#125;)
+                  <p className='text-rose-400 pl-2 text-[11px]'>
+                    ⛔ [403 DENIED] Tool not assigned to operator profile
                   </p>
                 </div>
               </motion.div>

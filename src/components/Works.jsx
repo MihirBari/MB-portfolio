@@ -7,6 +7,7 @@ import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import McpSandboxSimulator from "./McpSandboxSimulator";
 
 const ProjectModal = ({ project, onClose }) => {
   useEffect(() => {
@@ -85,6 +86,9 @@ const ProjectModal = ({ project, onClose }) => {
               {project.longDescription || project.description}
             </p>
           </div>
+
+          {/* Interactive Sandbox & Profile Auth Feature Demo */}
+          {project.id === "mcp-ai" && <McpSandboxSimulator />}
 
           {/* Key Highlights */}
           {project.highlights && project.highlights.length > 0 && (
@@ -244,6 +248,19 @@ const ProjectCard = ({
             <p className='mt-2 text-secondary text-[13px] leading-relaxed line-clamp-3'>
               {description}
             </p>
+
+            {project.id === "mcp-ai" && (
+              <div className='mt-3 flex flex-wrap gap-2'>
+                <span className='px-2.5 py-1 rounded-lg text-[11px] font-mono bg-[#00f0ff]/10 border border-[#00f0ff]/30 text-[#00f0ff] flex items-center gap-1.5 shadow-[0_0_12px_rgba(0,240,255,0.15)]'>
+                  <span className='w-1.5 h-1.5 rounded-full bg-[#00f0ff] animate-pulse' />
+                  <span>⚡ Sandbox Query Box</span>
+                </span>
+                <span className='px-2.5 py-1 rounded-lg text-[11px] font-mono bg-[#915EFF]/15 border border-[#915EFF]/30 text-purple-300 flex items-center gap-1.5 shadow-[0_0_12px_rgba(145,94,255,0.15)]'>
+                  <span className='w-1.5 h-1.5 rounded-full bg-[#915EFF]' />
+                  <span>🔒 Profile Auth & Tool RBAC</span>
+                </span>
+              </div>
+            )}
           </div>
         </div>
 
